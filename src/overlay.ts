@@ -1,7 +1,7 @@
 import { ctx } from "./graphics";
 import { sub } from './sub'
 import { crabs } from './crabs'
-import { newGame, state } from './state'
+import { newGame, pause, state } from './state'
 
 export const menuEl     = document.getElementById('menu') as HTMLElement;
 export const gameOverEl = document.getElementById('game-over') as HTMLElement;
@@ -27,5 +27,11 @@ export const renderOverlay = () => {
   }
 }
 
-startCTA.addEventListener('click',    () => { newGame(); });
+startCTA.addEventListener('click',    () => { 
+  if (!state.isGameOver) {
+    pause();
+  } else {
+    newGame();
+  }
+});
 restartCTA?.addEventListener('click', () => { newGame(); });

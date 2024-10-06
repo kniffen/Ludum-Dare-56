@@ -1,4 +1,5 @@
 import { resetCrabs } from "./crabs";
+import { debris } from "./debris/debris";
 import { gameOverEl, menuEl } from "./overlay";
 
 export interface GameState {
@@ -51,4 +52,5 @@ export const newGame = () => {
   menuEl.style.display = 'none';
   gameOverEl.style.display = 'none';
   resetCrabs();
+  debris.clear();
 }
