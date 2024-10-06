@@ -1,0 +1,27 @@
+{
+  "name": "ludum-dare-56",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "homepage": "https://kniffen.github.io/Ludum-Dare-56",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "gh-pages": "^6.1.1",
+    "typescript": "^5.5.3",
+    "vite": "^5.4.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kniffen/Ludum-Dare-56.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kniffen/Ludum-Dare-56/issues"
+  }
+}
