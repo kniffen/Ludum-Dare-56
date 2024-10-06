@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ludum Dare 56</title>
+    <script type="module" crossorigin src="/assets/index-DCEoVuM-.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-CIqT_RkN.css">
+  </head>
+  <body>
+    <div id="app">
+      <div id="menu" class="menu">
+        <h1 class="menu__title">Protect the crabs!</h1>
+        <p class="menu__description">
+          The ocean is being polluted by various ships in the region.<br/>
+          Your job is to protect the marine life (crabs) from the debris, <br/>
+          either by picking up crates or destroying them with torpedoes.<br/>
+          Good luck!
+        </p>
+
+        <h2>Controls</h2>
+        <ul class="menu__controls">
+          <li><b>WASD:</b>Move submarine</li>
+          <li><b>E:</b>Fire torpedo</li>
+          <li><b>P:</b>Pause</li>
+          <li><b>O:</b>Debug mode</li>
+        </ul>
+        <button id="cta-start" class="menu__button">Start</button>
+      </div>
+
+      <div id="game-over" class="menu">
+        <h1 class="menu__title">Game over</h1>
+        <p class="menu__description">
+          You failed to protect the crabs, better luck next time.
+        </p>
+        <button id="cta-restart" class="menu__button">Try again</button>
+      </div>
+
+      <canvas id="canvas"></canvas>
+    </div>
+  </body>
+</html>
