@@ -11,7 +11,7 @@ export const createCrateDebris = (debris: Debris): CrateDebris => ({
   ...debris,
   type: 'CRATE',
   radius: TILE_SIZE / 2 * debris.scale,
-  vel: [debris.vel[0], 200],
+  vel: [debris.vel[0], 300],
   value: Math.floor(randomNum(0, 5)),
   texture: {
     ...debris.texture,

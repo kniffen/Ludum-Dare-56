@@ -10,6 +10,6 @@ export const createTrashDebris = (debris: Debris): TrashDebris => ({
   ...debris,
   type: 'TRASH',
   radius: 10,
-  vel: [debris.vel[0], 100],
+  vel: [debris.vel[0], 150],
   value: Math.floor(randomNum(0, 5))
 })

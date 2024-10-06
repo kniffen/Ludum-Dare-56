@@ -13,7 +13,7 @@ export interface Torpedo {
 }
 
 const TEXTURE_OFFSET = [0, 4];
-const VELOCITY = 1000;
+const VELOCITY = 1500;
 export const torpedoes = new Set<Torpedo>();
 
 export const createTorpedo = (x: number, y: number) => {
