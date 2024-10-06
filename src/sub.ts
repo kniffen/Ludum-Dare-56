@@ -12,10 +12,11 @@ export interface Sub {
   texture: {
     offset: [number, number];
     size: [number, number];
-  }
+  },
+  acc: [number, number]
 }
 
-const VELOCITY = [600, 300]
+const VELOCITY = [800, 400]
 const img = new Image();
 const imgURL = new URL('../assets/sub.png', import.meta.url);
 img.src = imgURL.toString();
@@ -29,12 +30,13 @@ export const sub: Sub = {
   texture: {
     offset: [0 * TILE_SIZE, 0 * TILE_SIZE],
     size:   [3 * TILE_SIZE, 2 * TILE_SIZE]
-  }
+  },
+  acc: [0, 0]
 }
 
 export const updateSub = (dt: number) => {
-  sub.pos[0] += sub.vel[0] * dt;
-  sub.pos[1] += sub.vel[1] * dt;
+  sub.pos[0] += (sub.vel[0] + sub.acc[0]) * dt;
+  sub.pos[1] += (sub.vel[1] + sub.acc[1]) * dt;
 
   if (sub.pos[0] < sub.radius)         { sub.pos[0] = sub.radius;          }
   if (sub.pos[0] > WIDTH - sub.radius) { sub.pos[0] = WIDTH - sub.radius;  }
